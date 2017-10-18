@@ -52064,6 +52064,8 @@ func (s *RouteTableAssociation) SetSubnetId(v string) *RouteTableAssociation {
 type RunInstancesInput struct {
 	_ struct{} `type:"structure"`
 
+	InstanceName *string `locationName:"instanceName" type:"string"`
+
 	// Reserved.
 	AdditionalInfo *string `locationName:"additionalInfo" type:"string"`
 
