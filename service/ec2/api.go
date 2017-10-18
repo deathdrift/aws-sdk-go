@@ -37379,6 +37379,7 @@ type DetachNetworkInterfaceInput struct {
 	// AttachmentId is a required field
 	AttachmentId *string `locationName:"attachmentId" type:"string" required:"true"`
 
+	NetworkInterfaceId *string `locationName:"networkInterfaceId" type:"string" required:"true"`
 	// Checks whether you have the required permissions for the action, without
 	// actually making the request, and provides an error response. If you have
 	// the required permissions, the error response is DryRunOperation. Otherwise,
