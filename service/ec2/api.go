@@ -41035,6 +41035,8 @@ type Image struct {
 	// The value is Windows for Windows AMIs; otherwise blank.
 	Platform *string `locationName:"platform" type:"string" enum:"PlatformValues"`
 
+	ImageSize *int64 `locationName:"imageSize" type:"integer"`
+
 	// Any product codes associated with the AMI.
 	ProductCodes []*ProductCode `locationName:"productCodes" locationNameList:"item" type:"list"`
 
@@ -55815,6 +55817,9 @@ type Subnet struct {
 	// The ID of the subnet.
 	SubnetId *string `locationName:"subnetId" type:"string"`
 
+	// The Name of the subnet.
+	SubnetName *string `locationName:"subnetName" type:"string"`
+
 	// Any tags assigned to the subnet.
 	Tags []*Tag `locationName:"tagSet" locationNameList:"item" type:"list"`
 
@@ -55883,6 +55888,12 @@ func (s *Subnet) SetState(v string) *Subnet {
 // SetSubnetId sets the SubnetId field's value.
 func (s *Subnet) SetSubnetId(v string) *Subnet {
 	s.SubnetId = &v
+	return s
+}
+
+// SetSubnetName sets the SubnetName field's value.
+func (s *Subnet) SetSubnetName(v string) *Subnet {
+	s.SubnetName = &v
 	return s
 }
 
@@ -57495,6 +57506,10 @@ type Vpc struct {
 
 	// The ID of the VPC.
 	VpcId *string `locationName:"vpcId" type:"string"`
+
+	VpcName *string `locationName:"vpcName" type:"string"`
+
+	SubnetPolicy *string `locationName:"subnetPolicy" type:"string"`
 }
 
 // String returns the string representation
@@ -57558,6 +57573,12 @@ func (s *Vpc) SetTags(v []*Tag) *Vpc {
 // SetVpcId sets the VpcId field's value.
 func (s *Vpc) SetVpcId(v string) *Vpc {
 	s.VpcId = &v
+	return s
+}
+
+// SetVpcName sets the VpcName field's value.
+func (s *Vpc) SetVpcName(v string) *Vpc {
+	s.VpcName = &v
 	return s
 }
 

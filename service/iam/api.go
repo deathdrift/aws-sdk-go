@@ -23102,6 +23102,7 @@ type Policy struct {
 	// The friendly name (not ARN) identifying the policy.
 	PolicyName *string `min:"1" type:"string"`
 
+	PolicyDocument *string `type:"string"`
 	// The date and time, in ISO 8601 date-time format (http://www.iso.org/iso/iso8601),
 	// when the policy was last updated.
 	//
