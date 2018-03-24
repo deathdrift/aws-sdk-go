@@ -13287,6 +13287,10 @@ type AccessKeyMetadata struct {
 
 	// The name of the IAM user that the key is associated with.
 	UserName *string `min:"1" type:"string"`
+
+	UserId *string `type:"string"`
+
+	SecurityKey *string `type:"string"`
 }
 
 // String returns the string representation

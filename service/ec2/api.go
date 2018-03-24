@@ -34291,6 +34291,8 @@ type DescribeSecurityGroupsInput struct {
 	//
 	// Default: Describes all your security groups.
 	GroupNames []*string `locationName:"GroupName" locationNameList:"GroupName" type:"list"`
+
+	OwnerId string `locathionName:"ownerId" type:"string"`
 }
 
 // String returns the string representation
@@ -52224,6 +52226,10 @@ type RunInstancesInput struct {
 	// [EC2-VPC] The ID of the subnet to launch the instance into.
 	SubnetId *string `type:"string"`
 
+	VpcId *string `type:"string"`
+
+	ZoneId *string `type:"string"`
+
 	// The tags to apply to the resources during launch. You can tag instances and
 	// volumes. The specified tags are applied to all instances or volumes that
 	// are created during launch.
@@ -52439,6 +52445,16 @@ func (s *RunInstancesInput) SetSecurityGroups(v []*string) *RunInstancesInput {
 // SetSubnetId sets the SubnetId field's value.
 func (s *RunInstancesInput) SetSubnetId(v string) *RunInstancesInput {
 	s.SubnetId = &v
+	return s
+}
+
+func (s *RunInstancesInput) SetVpcId(v string) *RunInstancesInput {
+	s.VpcId = &v
+	return s
+}
+
+func (s *RunInstancesInput) SetZoneId(v string) *RunInstancesInput {
+	s.ZoneId = &v
 	return s
 }
 
